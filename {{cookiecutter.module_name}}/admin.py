@@ -35,5 +35,5 @@ class {% endraw %}{{cookiecutter.module_name|title}}Admin({{cookiecutter.module_
     pass
 
 def add_views(admin, db):
-    """Add {% endraw %}{{cookiecuttere.module_name}}{% raw %} admin views into views."""
+    """Add {% endraw %}{{cookiecutter.module_name}}{% raw %} admin views into views."""
     admin.add_view({% endraw %}{{cookiecutter.module_name|title}}Admin({{cookiecutter.module_name|title}}, db.session,endpoint='accidentadmin',category='Accident Data'))
