@@ -15,6 +15,8 @@ from wtforms.fields import HiddenField
 
 from wtforms.validators import DataRequired,ValidationError
 
+{% endraw %}from {{cookiecutter.app_name}}.models import {{cookiecutter.module_name|title}}{% raw %}
+
 import os
 import os.path as op
 
