@@ -15,7 +15,7 @@ from wtforms.fields import HiddenField
 
 from wtforms.validators import DataRequired,ValidationError
 
-{% endraw %}from {{cookiecutter.app_name}}.models import {{cookiecutter.module_name|title}}{% raw %}
+{% endraw %}from .models import {{cookiecutter.module_name|title}}{% raw %}
 
 import os
 import os.path as op
@@ -38,4 +38,4 @@ class {% endraw %}{{cookiecutter.module_name|title}}Admin({{cookiecutter.module_
 
 def add_views(admin, db):
     """Add {% endraw %}{{cookiecutter.module_name}}{% raw %} admin views into views."""
-    admin.add_view({% endraw %}{{cookiecutter.module_name|title}}Admin({{cookiecutter.module_name|title}}, db.session,endpoint='accidentadmin',category='Accident Data'))
+    admin.add_view({% endraw %}{{cookiecutter.module_name|title}}Admin({{cookiecutter.module_name|title}}, db.session,endpoint='accidentadmin'))
